@@ -20,7 +20,17 @@ Have the CovStats app deployed on Jungle's Testflight, showing the data retrieve
 
 ### Requirements
 
-Overall: - Setup the app code signing using the certificates stored in 1Password <ADD THE VAULT NAME HERE> Home screen: - Be able to see all fields expected in the design Map screen: - Be able to open the map screen and use the map
+Overall:
+
+- Setup the app code signing using the certificates stored in 1Password <ADD THE VAULT NAME HERE>
+
+Home screen:
+
+- Be able to see all fields expected in the design
+
+Map screen:
+
+- Be able to open and use the map screen
 
 ## Resources
 
@@ -30,7 +40,7 @@ https://wiki.jungle.rocks/doc/getting-started-with-1password-E7rDPBEdw1
 
 ## Pre-requisites
 
-- Knowledge on app code sigining and debug
+- Knowledge on app code sigining, debug and integration
 
 ## Instructions to run
 

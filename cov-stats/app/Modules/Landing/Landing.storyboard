@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Landing View Controller-->
+        <scene sceneID="haM-Y3-Kse">
+            <objects>
+                <viewController storyboardIdentifier="LandingViewController" id="5Sd-hf-RcH" customClass="LandingViewController" customModule="cov_stats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0hX-n4-Rbt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="art-7q-MWs">
+                                <rect key="frame" x="14.5" y="42" width="346" height="332"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mGh-fV-vcy">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="158"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8b-hx-gPW">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="158" id="Cht-JN-rHp"/>
+                                                    <constraint firstAttribute="height" constant="158" id="vjk-Oh-zH8"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vho-Vd-Pba">
+                                                <rect key="frame" x="188" y="0.0" width="158" height="158"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="158" id="2nr-TI-b4z"/>
+                                                    <constraint firstAttribute="width" constant="158" id="kgu-D7-dzh"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-vw-BU3">
+                                        <rect key="frame" x="0.0" y="174" width="346" height="158"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPS-80-XiE">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="158" id="9QZ-V8-gJi"/>
+                                                    <constraint firstAttribute="width" constant="158" id="chy-sX-zIz"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UW8-SV-RdY">
+                                                <rect key="frame" x="188" y="0.0" width="158" height="158"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="158" id="eLS-8A-1H4"/>
+                                                    <constraint firstAttribute="width" constant="158" id="zjd-f5-oyP"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FDZ-b4-g2G">
+                                <rect key="frame" x="14.5" y="399" width="346" height="260"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cty-CV-QUY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FDZ-b4-g2G" firstAttribute="top" secondItem="art-7q-MWs" secondAttribute="bottom" constant="25" id="12V-bD-SO7"/>
+                            <constraint firstItem="FDZ-b4-g2G" firstAttribute="leading" secondItem="art-7q-MWs" secondAttribute="leading" id="7ya-2G-b8X"/>
+                            <constraint firstItem="art-7q-MWs" firstAttribute="top" secondItem="cty-CV-QUY" secondAttribute="top" constant="42" id="dOe-QW-hOh"/>
+                            <constraint firstItem="FDZ-b4-g2G" firstAttribute="trailing" secondItem="art-7q-MWs" secondAttribute="trailing" id="pfC-54-noM"/>
+                            <constraint firstItem="cty-CV-QUY" firstAttribute="bottom" secondItem="FDZ-b4-g2G" secondAttribute="bottom" constant="8" id="uwH-8e-CNp"/>
+                            <constraint firstItem="art-7q-MWs" firstAttribute="centerX" secondItem="0hX-n4-Rbt" secondAttribute="centerX" id="xgk-Ds-Gfs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsH-03-JFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="-4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

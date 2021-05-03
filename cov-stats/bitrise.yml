@@ -1,0 +1,227 @@
+---
+format_version: '8'
+default_step_lib_source: 'https://github.com/bitrise-io/bitrise-steplib.git'
+project_type: ios
+app:
+  envs:
+  - FASTLANE_XCODE_LIST_TIMEOUT: '120'
+  - opts:
+      is_expand: false
+    FASTLANE_WORK_DIR: .
+  - opts:
+      is_expand: false
+    FASTLANE_LANE: ios beta
+trigger_map: []
+workflows:
+  Production:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@4: {}
+    - xcode-project-info@2:
+        inputs:
+        - xcodeproj_path: boilerplate-ios.xcodeproj
+        - info_plist_path: Configs/Info.plist
+    - script@1:
+        inputs:
+        - content: |-
+            if [[ -z "${VERSION}" ]]; then
+              envman add --key PROJECT_VERSION --value $XPI_VERSION
+            else
+              envman add --key PROJECT_VERSION --value $VERSION
+            fi
+    - cache-pull@2: {}
+    - cocoapods-install@1: {}
+    - ios-auto-provision-appstoreconnect@0:
+        inputs:
+        - configuration: Production Release
+        - scheme: boilerplate-ios Production
+        - project_path: boilerplate-ios.xcworkspace
+        - distribution_type: app-store
+    - set-xcode-build-number@1:
+        inputs:
+        - build_short_version_string: $PROJECT_VERSION
+        - plist_path: Configs/Info.plist
+    - xcode-archive@3:
+        inputs:
+        - team_id: $TEAM_ID
+        - project_path: boilerplate-ios.xcworkspace
+        - scheme: boilerplate-ios Production
+        - configuration: Production Release
+        - export_method: app-store
+    - deploy-to-itunesconnect-application-loader@0:
+        inputs:
+        - password: $APPLE_PASSWORD
+        - app_password: $APPLE_APPLICATION_SPECIFIC_PASSWORD
+        - itunescon_user: $APPLE_USER
+    - script@1:
+        inputs:
+        - content: >
+            set -e
+
+
+            git --version
+
+            add-apt-repository ppa:git-core/ppa
+
+            apt update
+
+            apt install -y git
+
+            git --version
+
+
+            git fetch --all --tags
+
+            npm install -g conventional-recommended-bump
+
+            npm install -g conventional-changelog-cli
+
+            npm install -g conventional-changelog-angular
+
+            npm install -g conventional-github-releaser
+
+            npm install -g semver
+
+
+            git config --local user.email "dev@jungledevs.com"
+
+            git config --local user.name "Bitrise Action"
+
+
+            conventional-changelog -p angular -i CHANGELOG.md -s && git add
+            CHANGELOG.md && git commit -m 'docs: Update changelog file'
+
+
+            git tag "${PROJECT_VERSION}-build${BITRISE_BUILD_NUMBER}"
+
+            git push origin $BITRISE_GIT_BRANCH
+
+            git push origin "${PROJECT_VERSION}-build${BITRISE_BUILD_NUMBER}"
+
+
+            export CONVENTIONAL_GITHUB_RELEASER_TOKEN="${GITHUB_ACCESS_TOKEN}"
+
+            conventional-github-releaser -p angular
+        title: Create github release change-log
+    - cache-push@2: {}
+    - deploy-to-bitrise-io@1: {}
+    envs:
+    - opts:
+        is_expand: false
+      TARGET_ID: null
+    - opts:
+        is_expand: false
+      FASTLANE_BUILD_LANE: production
+    - opts:
+        is_expand: false
+      TEAM_ID: XXXXXXXXXX
+    - opts:
+        is_expand: false
+      SCHEME: boilerplate-ios Production
+  Staging:
+    steps:
+    - activate-ssh-key@4:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@4: {}
+    - xcode-project-info@2:
+        inputs:
+        - xcodeproj_path: boilerplate-ios.xcodeproj
+        - info_plist_path: Configs/Info.plist
+    - script@1:
+        inputs:
+        - content: |-
+            if [[ -z "${VERSION}" ]]; then
+              envman add --key PROJECT_VERSION --value $XPI_VERSION
+            else
+              envman add --key PROJECT_VERSION --value $VERSION
+            fi
+    - cache-pull@2: {}
+    - cocoapods-install@1: {}
+    - ios-auto-provision-appstoreconnect@0:
+        inputs:
+        - configuration: Production Release
+        - scheme: boilerplate-ios Staging
+        - project_path: boilerplate-ios.xcworkspace
+        - distribution_type: app-store
+    - set-xcode-build-number@1:
+        inputs:
+        - build_short_version_string: $PROJECT_VERSION
+        - plist_path: Configs/Info.plist
+    - xcode-archive@3:
+        inputs:
+        - team_id: $TEAM_ID
+        - project_path: boilerplate-ios.xcworkspace
+        - scheme: boilerplate-ios Staging
+        - configuration: Staging Release
+        - export_method: app-store
+    - deploy-to-itunesconnect-application-loader@0:
+        inputs:
+        - password: $APPLE_PASSWORD
+        - app_password: $APPLE_APPLICATION_SPECIFIC_PASSWORD
+        - itunescon_user: $APPLE_USER
+    - script@1:
+        inputs:
+        - content: >
+            set -e
+
+
+            git --version
+
+            add-apt-repository ppa:git-core/ppa
+
+            apt update
+
+            apt install -y git
+
+            git --version
+
+
+            git fetch --all --tags
+
+            npm install -g conventional-recommended-bump
+
+            npm install -g conventional-changelog-cli
+
+            npm install -g conventional-changelog-angular
+
+            npm install -g conventional-github-releaser
+
+            npm install -g semver
+
+
+            git config --local user.email "dev@jungledevs.com"
+
+            git config --local user.name "Bitrise Action"
+
+
+            conventional-changelog -p angular -i CHANGELOG.md -s && git add
+            CHANGELOG.md && git commit -m 'docs: Update changelog file'
+
+
+            git tag "${PROJECT_VERSION}-build${BITRISE_BUILD_NUMBER}"
+
+            git push origin $BITRISE_GIT_BRANCH
+
+            git push origin "${PROJECT_VERSION}-build${BITRISE_BUILD_NUMBER}"
+
+
+            export CONVENTIONAL_GITHUB_RELEASER_TOKEN="${GITHUB_ACCESS_TOKEN}"
+
+            conventional-github-releaser -p angular
+        title: Create github release change-log
+    - cache-push@2: {}
+    - deploy-to-bitrise-io@1: {}
+    envs:
+    - opts:
+        is_expand: false
+      TARGET_ID: com.jungledevs.boilerplate-ios
+    - opts:
+        is_expand: false
+      FASTLANE_BUILD_LANE: staging
+    - opts:
+        is_expand: false
+      TEAM_ID: XXXXXXXXXX
+    - opts:
+        is_expand: false
+      SCHEME: boilerplate-ios Staging
