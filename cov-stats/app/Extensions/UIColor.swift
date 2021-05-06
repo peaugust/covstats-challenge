@@ -14,7 +14,6 @@ extension UIColor {
     static let gray3 = UIColor("#999999")
     static let black = UIColor("#151522")
     static let green = UIColor("#00C48C")
-    
 }
 
 extension UIColor {
