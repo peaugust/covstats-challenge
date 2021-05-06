@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Cjd-sW-vKO">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="PvW-SF-oc5" customClass="HomeViewController" customModule="cov_stats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NSf-yr-PjL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="K1h-4u-ngb">
+                                <rect key="frame" x="34" y="86" width="346" height="332"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VSc-tZ-mqi">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="158"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tel-hP-JkZ" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="158" id="APx-ez-JfR"/>
+                                                    <constraint firstAttribute="height" constant="158" id="TzY-qh-paM"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKb-Lc-aoQ" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="0.0" width="158" height="158"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="158" id="4r7-Tw-iKX"/>
+                                                    <constraint firstAttribute="width" constant="158" id="wZ1-6g-Wmd"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="b2x-o9-SgT">
+                                        <rect key="frame" x="0.0" y="174" width="346" height="158"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0l-YX-Bbq" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="158" id="DB6-6x-ZA5"/>
+                                                    <constraint firstAttribute="height" constant="158" id="WT9-sX-8Bb"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nr2-me-6dc" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="0.0" width="158" height="158"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="158" id="XLA-mF-KvG"/>
+                                                    <constraint firstAttribute="width" constant="158" id="gPd-Ik-moq"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehD-Zz-Oh5">
+                                <rect key="frame" x="34" y="442" width="346" height="396"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ehM-qi-Rid">
+                                        <rect key="frame" x="10" y="14" width="326" height="368"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ehM-qi-Rid" secondAttribute="trailing" constant="10" id="1uh-il-Li0"/>
+                                    <constraint firstItem="ehM-qi-Rid" firstAttribute="top" secondItem="ehD-Zz-Oh5" secondAttribute="top" constant="14" id="3yk-Tc-rvf"/>
+                                    <constraint firstAttribute="bottom" secondItem="ehM-qi-Rid" secondAttribute="bottom" constant="14" id="XNt-8W-vE9"/>
+                                    <constraint firstItem="ehM-qi-Rid" firstAttribute="leading" secondItem="ehD-Zz-Oh5" secondAttribute="leading" constant="10" id="fZe-ph-w3w"/>
+                                    <constraint firstAttribute="trailing" secondItem="ehM-qi-Rid" secondAttribute="trailing" constant="10" id="hSh-cT-ItZ"/>
+                                    <constraint firstItem="ehM-qi-Rid" firstAttribute="centerX" secondItem="ehD-Zz-Oh5" secondAttribute="centerX" id="k7u-a0-kHJ"/>
+                                    <constraint firstItem="ehM-qi-Rid" firstAttribute="centerY" secondItem="ehD-Zz-Oh5" secondAttribute="centerY" id="lFD-aA-gSw"/>
+                                    <constraint firstItem="ehM-qi-Rid" firstAttribute="leading" secondItem="ehD-Zz-Oh5" secondAttribute="leading" constant="10" id="vax-0y-eZr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LOw-22-9Fe"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ehD-Zz-Oh5" firstAttribute="leading" secondItem="K1h-4u-ngb" secondAttribute="leading" id="0LE-N7-9La"/>
+                            <constraint firstItem="ehD-Zz-Oh5" firstAttribute="trailing" secondItem="K1h-4u-ngb" secondAttribute="trailing" id="PW5-7k-5KB"/>
+                            <constraint firstItem="LOw-22-9Fe" firstAttribute="bottom" secondItem="ehD-Zz-Oh5" secondAttribute="bottom" constant="24" id="Qee-yy-N8F"/>
+                            <constraint firstItem="K1h-4u-ngb" firstAttribute="top" secondItem="LOw-22-9Fe" secondAttribute="top" constant="42" id="Wga-D7-cuf"/>
+                            <constraint firstItem="K1h-4u-ngb" firstAttribute="centerX" secondItem="NSf-yr-PjL" secondAttribute="centerX" id="aGE-ex-BSD"/>
+                            <constraint firstItem="ehD-Zz-Oh5" firstAttribute="top" secondItem="K1h-4u-ngb" secondAttribute="bottom" constant="24" id="ww1-hl-8XJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activeCasesView" destination="c0l-YX-Bbq" id="hqh-ff-jxC"/>
+                        <outlet property="recoveredView" destination="bKb-Lc-aoQ" id="bTj-h6-7LC"/>
+                        <outlet property="tableView" destination="ehM-qi-Rid" id="PlA-CW-MBR"/>
+                        <outlet property="tableViewBackground" destination="ehD-Zz-Oh5" id="SVg-Jz-QNE"/>
+                        <outlet property="totalCasesView" destination="Tel-hP-JkZ" id="Co8-ma-19r"/>
+                        <outlet property="totalDeathView" destination="Nr2-me-6dc" id="GPf-Kj-2wi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CYH-gI-Q3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155.07246376811597" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

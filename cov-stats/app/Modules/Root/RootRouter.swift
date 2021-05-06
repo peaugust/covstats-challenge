@@ -19,22 +19,7 @@ final class RootRouter {
     // MARK: Actions
 
     func presentInitialScreen() {
-        if SessionHelper.shared.isUserLogged {
-            presentCoreScreen()
-        } else {
-            presentLandingScreen()
-        }
-    }
-
-    // MARK: Private
-
-    private func presentLandingScreen() {
-        let landingViewController = LandingViewController.initModule()
-        presentAsRoot(landingViewController)
-    }
-
-    private func presentCoreScreen() {
-        let coreViewController = CoreViewController.initModule()
+        let coreViewController = CoreViewController()
         presentAsRoot(coreViewController)
     }
 }
