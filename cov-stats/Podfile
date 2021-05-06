@@ -17,11 +17,13 @@ def shared_pods
     # Tooling
     pod 'RxCocoa', '~> 5.1'
     pod 'RxSwift', '~> 5.1'
+
+    pod 'FlagKit', :git => 'https://github.com/madebybowtie/FlagKit'
 end
 
 target 'cov-stats' do
   shared_pods
-  
+
   target 'cov-statsTests' do
     inherit! :search_paths
 

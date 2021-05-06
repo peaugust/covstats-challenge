@@ -48,7 +48,7 @@ final class StatView: UIView, NibLoadable {
     private func setupLabels() {
         titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         titleLabel.textColor = .gray3
-        valueLabel.font = UIFont.systemFont(ofSize: 26, weight: .medium)
+        valueLabel.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
     }
 }
 

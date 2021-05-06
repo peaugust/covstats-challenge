@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.1)
+  - FlagKit (2.3)
   - Nimble (9.0.0)
   - OHHTTPStubs/Core (9.1.0)
   - OHHTTPStubs/Default (9.1.0):
@@ -25,6 +26,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
+  - FlagKit (from `https://github.com/madebybowtie/FlagKit`)
   - Nimble
   - OHHTTPStubs/Swift
   - Quick
@@ -43,8 +45,18 @@ SPEC REPOS:
     - RxSwift
     - SwiftLint
 
+EXTERNAL SOURCES:
+  FlagKit:
+    :git: https://github.com/madebybowtie/FlagKit
+
+CHECKOUT OPTIONS:
+  FlagKit:
+    :commit: f12111d91902d23fd1d9cc7ad9198030b049795d
+    :git: https://github.com/madebybowtie/FlagKit
+
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  FlagKit: 19aacb92862d07172eb80c6320ab1fdf6d379433
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
@@ -53,6 +65,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 59b21c33d3117cc40f1ce7a9d07a4ce8ed9158ca
+PODFILE CHECKSUM: da912db5e217f265fc639222f237822c2a343a74
 
 COCOAPODS: 1.10.0

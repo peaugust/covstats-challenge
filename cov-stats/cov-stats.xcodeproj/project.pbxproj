@@ -59,7 +59,6 @@
 		722C98BDA09C1BCCE3819833 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA1051D14AA1A072D4F4E5A /* Reusable.swift */; };
 		72342AE8254C81DE79E938CB /* StubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801D91A8FD1AEAB98DAB44F3 /* StubHelper.swift */; };
 		7314616603DF8D577700F7E5 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A92A1515067EE6C2BE4D9B8 /* NSAttributedString.swift */; };
-		78124D7B72118CE0C48A8C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 864C2E268F5B8CE3029D9385 /* Assets.xcassets */; };
 		7A5EF7578E366B8649BE49A3 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EC3B7B6367CB70B60364F0 /* Optional.swift */; };
 		7C7BA7866D119A4C8D0F42BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCAB4AC57A9DB268B574BD7 /* LaunchScreen.storyboard */; };
 		7D1E20A9CA01A7034C843C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EF22A9FF92DF3AA69CAE3 /* AppDelegate.swift */; };
@@ -88,12 +87,16 @@
 		BECA50FBCBBCD1A6B1835730 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB460E2B3BBF5B97601586D /* RootRouter.swift */; };
 		C3294C0C29FF876D621126F9 /* CoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2FFFDD12F713CB8D53672 /* CoreViewController.swift */; };
 		C3F84919C9B680B8DA3260F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6AC0CD6B9A8B11BA2B3207 /* Constants.swift */; };
-		C690C3DE26436E2200F3775D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C690C3DC26436E2200F3775D /* Home.storyboard */; };
-		C690C3DF26436E2200F3775D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690C3DD26436E2200F3775D /* HomeViewController.swift */; };
 		C690C3E426436E2D00F3775D /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C690C3E226436E2D00F3775D /* Map.storyboard */; };
 		C690C3E526436E2D00F3775D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690C3E326436E2D00F3775D /* MapViewController.swift */; };
 		C690C3F52643753400F3775D /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690C3F32643753400F3775D /* StatView.swift */; };
 		C690C3F62643753400F3775D /* StatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C690C3F42643753400F3775D /* StatView.xib */; };
+		C6DA9D8826442F7700AA7D73 /* LiveReportsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6DA9D8626442F7700AA7D73 /* LiveReportsHeader.xib */; };
+		C6DA9D8926442F7700AA7D73 /* LiveReportsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA9D8726442F7700AA7D73 /* LiveReportsHeader.swift */; };
+		C6DA9D8E26442FA100AA7D73 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA9D8C26442FA100AA7D73 /* CountryCell.swift */; };
+		C6DA9D8F26442FA100AA7D73 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6DA9D8D26442FA100AA7D73 /* CountryCell.xib */; };
+		C6DA9D9326442FC700AA7D73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA9D9226442FC700AA7D73 /* HomeViewController.swift */; };
+		C6DA9D992644304700AA7D73 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DA9D982644304700AA7D73 /* Home.storyboard */; };
 		C6ED821CF783BE20F3F5664F /* APILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B1E671A7BC0D4B9342B1A /* APILogger.swift */; };
 		C7EBF3D2D0C60B6D78AB9883 /* APIRequestableResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E70D9EAAB3DF02C1A3C16B0 /* APIRequestableResponseValidator.swift */; };
 		CC648081BBC45CDA3FF88CB7 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB08060E01E38111D74814A /* UIActivityIndicatorView.swift */; };
@@ -146,7 +149,7 @@
 		35EB154777D2EC9570CDC2A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		393FBB87B06C1961C42CA60A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3A92A1515067EE6C2BE4D9B8 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
-		408BAC92525CE19EF15B18D0 /* cov-stats.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "cov-stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		408BAC92525CE19EF15B18D0 /* cov-stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cov-stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AD28FE909CC4C80E7F4F6C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		46937E97598606A696D40BF7 /* production debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "production debug.xcconfig"; sourceTree = "<group>"; };
 		4DFC501C3F7DEE94459F9A3E /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -184,12 +187,16 @@
 		BE4ABC4C329205DBD943D63D /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		C4B452CCF47E1F45E3F50D39 /* APIRequestableDataConverterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestableDataConverterSpec.swift; sourceTree = "<group>"; };
 		C5D2F30D6EE6337D85B7E8BB /* Optional+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+String.swift"; sourceTree = "<group>"; };
-		C690C3DC26436E2200F3775D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Home.storyboard; path = app/Modules/Home/Home.storyboard; sourceTree = SOURCE_ROOT; };
-		C690C3DD26436E2200F3775D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = app/Modules/Home/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		C690C3E226436E2D00F3775D /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Map.storyboard; path = app/Modules/Map/Map.storyboard; sourceTree = SOURCE_ROOT; };
 		C690C3E326436E2D00F3775D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = app/Modules/Map/MapViewController.swift; sourceTree = SOURCE_ROOT; };
 		C690C3F32643753400F3775D /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatView.swift; path = app/CommonViews/StatView/StatView.swift; sourceTree = SOURCE_ROOT; };
 		C690C3F42643753400F3775D /* StatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StatView.xib; path = app/CommonViews/StatView/StatView.xib; sourceTree = SOURCE_ROOT; };
+		C6DA9D8626442F7700AA7D73 /* LiveReportsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveReportsHeader.xib; sourceTree = "<group>"; };
+		C6DA9D8726442F7700AA7D73 /* LiveReportsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveReportsHeader.swift; sourceTree = "<group>"; };
+		C6DA9D8C26442FA100AA7D73 /* CountryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		C6DA9D8D26442FA100AA7D73 /* CountryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		C6DA9D9226442FC700AA7D73 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../../../.Trash/HomeViewController.swift; sourceTree = "<group>"; };
+		C6DA9D982644304700AA7D73 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = ../../../../../../.Trash/Home.storyboard; sourceTree = "<group>"; };
 		CB6AC0CD6B9A8B11BA2B3207 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CD8FA96FF2D9E7FD11507D93 /* LocalStoreHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoreHelper.swift; sourceTree = "<group>"; };
 		D36AA80843EE242E93992801 /* Pods-cov-statsTests.staging release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cov-statsTests.staging release.xcconfig"; path = "Target Support Files/Pods-cov-statsTests/Pods-cov-statsTests.staging release.xcconfig"; sourceTree = "<group>"; };
@@ -467,8 +474,8 @@
 		C690C3C826436CB300F3775D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C690C3DC26436E2200F3775D /* Home.storyboard */,
-				C690C3DD26436E2200F3775D /* HomeViewController.swift */,
+				C6DA9D982644304700AA7D73 /* Home.storyboard */,
+				C6DA9D9226442FC700AA7D73 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -490,6 +497,26 @@
 			);
 			path = StatView;
 			sourceTree = "<group>";
+		};
+		C6DA9D8326442F4C00AA7D73 /* CountryCell */ = {
+			isa = PBXGroup;
+			children = (
+				C6DA9D8C26442FA100AA7D73 /* CountryCell.swift */,
+				C6DA9D8D26442FA100AA7D73 /* CountryCell.xib */,
+			);
+			name = CountryCell;
+			path = app/CommonViews/CountryCell;
+			sourceTree = SOURCE_ROOT;
+		};
+		C6DA9D8526442F6500AA7D73 /* LiveReportsHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C6DA9D8726442F7700AA7D73 /* LiveReportsHeader.swift */,
+				C6DA9D8626442F7700AA7D73 /* LiveReportsHeader.xib */,
+			);
+			name = LiveReportsHeader;
+			path = app/CommonViews/LiveReportsHeader;
+			sourceTree = SOURCE_ROOT;
 		};
 		D96C1A98229D7306D7E6C467 /* Root */ = {
 			isa = PBXGroup;
@@ -518,6 +545,8 @@
 		F4925ADE9DB4E90018F2BC74 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				C6DA9D8526442F6500AA7D73 /* LiveReportsHeader */,
+				C6DA9D8326442F4C00AA7D73 /* CountryCell */,
 				C690C3EC264374F900F3775D /* StatView */,
 				9AC9BE923911A5622AF80B66 /* TextField */,
 			);
@@ -568,6 +597,7 @@
 				1D03FCB85B50AC598FC46124 /* SwiftLint */,
 				3A0581D1A055C88722BBC55E /* Resources */,
 				493092D65F63EBB8217D2999 /* Frameworks */,
+				7728A8B45C47789BAE093F36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -622,12 +652,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78124D7B72118CE0C48A8C5B /* Assets.xcassets in Resources */,
+				C6DA9D992644304700AA7D73 /* Home.storyboard in Resources */,
 				C690C3F62643753400F3775D /* StatView.xib in Resources */,
-				C690C3DE26436E2200F3775D /* Home.storyboard in Resources */,
+				C6DA9D8F26442FA100AA7D73 /* CountryCell.xib in Resources */,
 				A965EB7D9E0E0CD2E30EEECE /* InfoTests.plist in Resources */,
 				7C7BA7866D119A4C8D0F42BB /* LaunchScreen.storyboard in Resources */,
 				53526486C0A9A719FB0D1CB1 /* Localizable.strings in Resources */,
+				C6DA9D8826442F7700AA7D73 /* LiveReportsHeader.xib in Resources */,
 				C690C3E426436E2D00F3775D /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,7 +704,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		70A0DF1CFA1CD1F5BC39290F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -697,6 +728,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7728A8B45C47789BAE093F36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cov-stats/Pods-cov-stats-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cov-stats/Pods-cov-stats-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cov-stats/Pods-cov-stats-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -709,11 +757,12 @@
 				818D9FBC30F8FEE54CC8A095 /* APIRequestableDataConverter.swift in Sources */,
 				C7EBF3D2D0C60B6D78AB9883 /* APIRequestableResponseValidator.swift in Sources */,
 				5327A3BF091FAEC3AAD4ADD9 /* APITypes.swift in Sources */,
-				C690C3DF26436E2200F3775D /* HomeViewController.swift in Sources */,
+				C6DA9D8E26442FA100AA7D73 /* CountryCell.swift in Sources */,
 				68FE9EC4FE6B3BEE491ABA69 /* AppDelegate.swift in Sources */,
 				102862B4494F3D12F8557CFB /* BaseViewController.swift in Sources */,
 				8EBD3C84B895128E03AAED23 /* Bundle.swift in Sources */,
 				C690C3E526436E2D00F3775D /* MapViewController.swift in Sources */,
+				C6DA9D8926442F7700AA7D73 /* LiveReportsHeader.swift in Sources */,
 				10678AF7FD842A95CB8F301E /* Codable.swift in Sources */,
 				AB24036FEA42D36505EC5D52 /* Collection.swift in Sources */,
 				C3F84919C9B680B8DA3260F6 /* Constants.swift in Sources */,
@@ -727,6 +776,7 @@
 				3552483A6CA4BA124B214C02 /* NibLoadable.swift in Sources */,
 				BE185FBFE7F59D94B48EFB51 /* Optional+String.swift in Sources */,
 				7A5EF7578E366B8649BE49A3 /* Optional.swift in Sources */,
+				C6DA9D9326442FC700AA7D73 /* HomeViewController.swift in Sources */,
 				3485D80CDA093793BC40035E /* PaginatedResponse.swift in Sources */,
 				81BE173C6776040C83D7F02A /* Range.swift in Sources */,
 				F968FCE9AED725082578B5D1 /* Reusable.swift in Sources */,
