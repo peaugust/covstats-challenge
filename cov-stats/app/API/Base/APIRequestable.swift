@@ -37,11 +37,6 @@ extension APIRequestable {
         return JSONDecoder.KeyDecodingStrategy.convertFromSnakeCase
     }
 
-    public var headers: HTTPHeaders? {
-        guard let token = SessionHelper.shared.authToken else { return HTTPHeaders() }
-        return ["Authorization": "Token \(token)"]
-    }
-
     public var apiLoggerLevel: APILoggerLevel {
         return .off
     }
@@ -96,9 +91,6 @@ extension APIRequestable {
                         completion(.success(convertedResponseObject))
                     } catch let error as APIError {
                         self.logIfNeeded("[REQUEST ERROR] APIError: \(error.debugDescription)")
-                        if error == APIError.invalidToken(nil) && self.logoutIfUnauthorized { // Logout if needed
-                            SessionHelper.shared.logout()
-                        }
                         completion(APIResult.failure(error))
                     } catch {
                         self.logIfNeeded("[REQUEST ERROR] Unkown: \(error.localizedDescription)")

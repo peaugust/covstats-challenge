@@ -11,6 +11,7 @@ import UIKit
 extension UIColor {
     static let brandColor = UIColor("#FF647C")
     static let gray60 = UIColor("#E4E4E4")
+    static let gray40 = UIColor("#666666")
     static let gray3 = UIColor("#999999")
     static let black = UIColor("#151522")
     static let green = UIColor("#00C48C")
