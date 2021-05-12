@@ -18,7 +18,7 @@ def shared_pods
     pod 'RxCocoa', '~> 5.1'
     pod 'RxSwift', '~> 5.1'
 
-    pod 'FlagKit', :git => 'https://github.com/madebybowtie/FlagKit'
+    pod 'FlagKit', :git =>'https://github.com/madebybowtie/FlagKit.git', :tag => '2.4.0'
 end
 
 target 'cov-stats' do
