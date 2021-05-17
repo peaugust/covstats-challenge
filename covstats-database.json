@@ -1,0 +1,37 @@
+{
+  "latest_data": {
+    "stats": {
+      "total_cases": "+164M",
+      "recovered_cases": "+142M",
+      "active_cases": "24.711.894",
+      "death_cases": "3.401.065"
+    },
+    "cases_by_country": [
+      {
+        "code": "BR",
+        "name": "Brazil",
+        "cases": "15.627.475"
+      },
+      {
+        "code": "IN",
+        "name": "India",
+        "cases": "25.227.970"
+      },
+      {
+        "code": "US",
+        "name": "USA",
+        "cases": "33.733.699"
+      },
+      {
+        "code": "FR",
+        "name": "France",
+        "cases": "5.881.137"
+      },
+      {
+        "code": "TR",
+        "name": "Turkey",
+        "cases": "5.127.548"
+      }
+    ]
+  }
+}
