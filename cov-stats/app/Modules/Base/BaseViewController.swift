@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class BaseViewController: UIViewController {
 
@@ -15,6 +16,8 @@ class BaseViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
+    
+    let disposeBag = DisposeBag()
 
     // MARK: Life cycle
 
