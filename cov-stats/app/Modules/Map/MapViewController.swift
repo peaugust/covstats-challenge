@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import RxCocoa
 
 class MapViewController: BaseViewController, StoryboardLoadable {
 
@@ -21,10 +22,11 @@ class MapViewController: BaseViewController, StoryboardLoadable {
 
     // MARK: - IBOutlets
 
-    @IBOutlet var mapView: MKMapView!
-    @IBOutlet var dropdownView: UIView!
-    @IBOutlet var dropdownLabel: UILabel!
-    @IBOutlet var dropdownIcon: UIImageView!
+    @IBOutlet private var mapView: MKMapView!
+    @IBOutlet private var dropdownView: UIView!
+    @IBOutlet private var dropdownLabel: UILabel!
+    @IBOutlet private var dropdownIcon: UIImageView!
+    @IBOutlet private var dropdownItems: DropdownItems!
     
     // MARK: - Properties
 
@@ -39,12 +41,14 @@ class MapViewController: BaseViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        dropdownItems.isHidden = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         LocationHelper.shared.delegate = self
         LocationHelper.shared.startMonitoringLocation()
+        parent?.title = "Discovery"
     }
 
     // MARK: - Private
@@ -53,12 +57,22 @@ class MapViewController: BaseViewController, StoryboardLoadable {
         dropdownView.layer.cornerRadius = 5
         dropdownView.layer.borderColor = UIColor.gray60.withAlphaComponent(0.6).cgColor
         dropdownView.layer.borderWidth = 1
-        
-        
+        let tapGesture = UITapGestureRecognizer()
+        dropdownView.addGestureRecognizer(tapGesture)
+
+        tapGesture.rx.event.bind(onNext: {[weak self] _ in
+            guard let self = self else { return }
+            self.dropdownIcon.transform = self.dropdownIcon.transform.rotated(by: .pi)
+            UIView.animate(withDuration: 0.36, animations: {
+                self.dropdownItems.isHidden = !self.dropdownItems.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }).disposed(by: disposeBag) 
+
         dropdownLabel.text = "Discover Corona Virus by"
         dropdownLabel.font = UIFont.systemFont(ofSize: 13, weight: .light)
         dropdownLabel.textColor = .black
-    
+
         dropdownIcon.image = UIImage(named: "ic-arrow-down")
     }
 

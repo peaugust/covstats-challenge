@@ -74,6 +74,7 @@
                     </view>
                     <connections>
                         <outlet property="dropdownIcon" destination="gxE-5Q-wAW" id="YKy-2c-juH"/>
+                        <outlet property="dropdownItems" destination="zcV-Xo-RR1" id="NMk-Zc-F5J"/>
                         <outlet property="dropdownLabel" destination="ijW-yo-7Jq" id="cXW-xW-mcm"/>
                         <outlet property="dropdownView" destination="XbF-WN-Etg" id="0R0-P5-SNJ"/>
                         <outlet property="mapView" destination="tYs-bs-NAE" id="REI-DG-248"/>
