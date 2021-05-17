@@ -19,24 +19,19 @@ enum Constants {
     }
 
     enum Endpoints {
-        private enum Version: String, CaseIterable {
-            case v1, v2
-        }
-
-        static private func getEndpointURL(_ version: Version, _ endpoint: String) -> String {
-            return URL.baseURL + "/api/" + version.rawValue + endpoint
+        static private func getEndpointURL(_ endpoint: String) -> String {
+            return URL.baseURL + endpoint
         }
 
         static func getPath(forEndpoint endpoint: String) -> String {
             var result = endpoint
-            for version in Version.allCases {
-                result = result.replacingOccurrences(of: URL.baseURL + "/api/" + version.rawValue, with: "")
-            }
+                        
+            result = result.replacingOccurrences(of: URL.baseURL, with: "")
             return result
         }
 
         // MARK: Auth
 
-        static var login: String { return getEndpointURL(.v1, "/login/") }
+        static var latestData: String { return getEndpointURL("/latest_data/") }
     }
 }

@@ -11,9 +11,10 @@ import UIKit
 class HomeViewController: BaseViewController, StoryboardLoadable {
 
     // MARK: - Factory
-    
-    static func initModule() -> HomeViewController {
+
+    static func initModule(viewModel: HomeViewModel) -> HomeViewController {
         let viewController = loadFromStoryboard()
+        viewController.viewModel = viewModel
         return viewController
     }
     
@@ -23,36 +24,54 @@ class HomeViewController: BaseViewController, StoryboardLoadable {
     @IBOutlet var activeCasesView: StatView!
     @IBOutlet var totalDeathView: StatView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var tableViewHeight: NSLayoutConstraint!
 
     // MARK: - Properties
-
+    private let tableViewHeaderHeight: CGFloat = 72.0
+    private let notAvailableText = "N/A"
+    private var viewModel: HomeViewModel?
+    private var dataSource: [CountryReport] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStatViews()
         setupTableView()
+        setupObservables()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        parent?.title = "COVID-19"
     }
 
     // MARK: - Private
+    
+    private func setupObservables() {
+        viewModel?.casesByCountry.subscribe(onNext: { [weak self] casesByCountry in
+            guard let self = self else { return }
+            self.dataSource = casesByCountry
+            self.tableViewHeight.constant = CGFloat(96 * casesByCountry.count) + self.tableViewHeaderHeight
+        }).disposed(by: disposeBag)
+        
+        viewModel?.stats.subscribe(onNext: { [weak self] stats in
+            guard let self = self else { return }
+            self.totalCasesView.setValue(value: stats?.totalCases ?? self.notAvailableText)
+            self.recoveredView.setValue(value: stats?.recoveredCases ?? self.notAvailableText, withColor: .green)
+            self.activeCasesView.setValue(value: stats?.activeCases ?? self.notAvailableText)
+            self.totalDeathView.setValue(value: stats?.deathCases ?? self.notAvailableText, withColor: .brandColor)
+        }).disposed(by: disposeBag)
+    }
 
     private func setupStatViews() {
-        totalCasesView.titleLabel.text = "Total Cases"
-        totalCasesView.valueLabel.text = "100.000"
-        totalCasesView.valueLabel.textColor = UIColor.black
-        recoveredView.titleLabel.text = "Recovered"
-        recoveredView.valueLabel.text = "100.000"
-        recoveredView.valueLabel.textColor = UIColor.green
-        activeCasesView.titleLabel.text = "Active Cases"
-        activeCasesView.valueLabel.text = "100.000"
-        activeCasesView.valueLabel.textColor = UIColor.black
-        totalDeathView.titleLabel.text = "Total Death"
-        totalDeathView.valueLabel.text = "100.000"
-        totalDeathView.valueLabel.textColor = UIColor.brandColor
+        totalCasesView.setTitle(title: "Total Cases")
+        recoveredView.setTitle(title: "Recovered")
+        activeCasesView.setTitle(title: "Active Cases")
+        totalDeathView.setTitle(title: "Total Death")
     }
 
     private func setupTableView() {
@@ -70,12 +89,13 @@ class HomeViewController: BaseViewController, StoryboardLoadable {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as CountryCell
-        cell.bind(countryCode: "BR", countryName: "Brazil", countryReports: "123.456")
+        let report = dataSource[indexPath.row]
+        cell.bind(countryCode: report.code, countryName: report.name, countryReports: report.cases)
         return cell
     }
 }
@@ -86,6 +106,6 @@ extension HomeViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 72
+        return tableViewHeaderHeight
     }
 }

@@ -16,4 +16,4 @@ ASSETCATALOG_COMPILER_APPICON_NAME = AppIconStaging
 PRODUCT_BUNDLE_IDENTIFIER = com.jungledevs.cov-stats.staging
 
 SLASH = / // Workaround to solve double slash problem (can't scape character)
-BASE_URL = https:$(SLASH)/api-staging.cov-stats.com
+BASE_URL = http:$(SLASH)/localhost:3000

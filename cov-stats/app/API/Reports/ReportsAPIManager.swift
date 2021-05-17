@@ -14,15 +14,14 @@ final class ReportsAPIManager {
         typealias APIResponse = ResponseBody
         var method: HTTPMethod = .get
         var parameters: Parameters?
-        // TODO: Edit this URL
-        var url: String = Constants.Endpoints.login
+        var url: String = Constants.Endpoints.latestData
         var headers: HTTPHeaders?
         var logoutIfUnauthorized: Bool = false
         var apiLoggerLevel: APILoggerLevel = .debug
         
         struct ResponseBody: Codable {
             let stats: StatsReports
-            let liveReports: LiveReports
+            let casesByCountry: [CountryReport]
         }
     }
 }

@@ -16,4 +16,4 @@ ASSETCATALOG_COMPILER_APPICON_NAME = AppIconProduction
 PRODUCT_BUNDLE_IDENTIFIER = com.jungledevs.cov-stats
 
 SLASH = / // Workaround to solve double slash problem (can't scape character)
-BASE_URL = https:$(SLASH)/api.cov-stats.com
+BASE_URL = http:$(SLASH)/api.cov-stats.com

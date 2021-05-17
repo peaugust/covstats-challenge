@@ -12,10 +12,10 @@ final class StatView: UIView, NibLoadable {
 
     // MARK: - IBOutlets
 
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var valueLabel: UILabel!
-    @IBOutlet var labelsStackView: UIStackView!
-    @IBOutlet var backgroundView: UIView!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var valueLabel: UILabel!
+    @IBOutlet private var labelsStackView: UIStackView!
+    @IBOutlet private var backgroundView: UIView!
     
     // MARK: - Properties
 
@@ -37,6 +37,17 @@ final class StatView: UIView, NibLoadable {
         setupLabels()
     }
 
+    // MARK: - Public
+    
+    func setTitle(title: String) {
+        titleLabel.text = title
+    }
+    
+    func setValue(value: String, withColor color: UIColor = .black) {
+        valueLabel.text = value
+        valueLabel.textColor = color
+    }
+    
     // MARK: - Private
 
     private func setupBackgroundView() {

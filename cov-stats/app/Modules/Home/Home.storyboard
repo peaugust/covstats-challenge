@@ -17,79 +17,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="G9x-CW-pH2">
-                                <rect key="frame" x="34" y="86" width="346" height="346"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHG-6O-oTY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="e7K-rK-DNR">
-                                        <rect key="frame" x="0.0" y="0.0" width="346" height="158"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-wU-Dfj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-Hk-Zff" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="G9x-CW-pH2">
+                                                <rect key="frame" x="34" y="42" width="346" height="346"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="e7K-rK-DNR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="346" height="158"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-Hk-Zff" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="158" id="Cnr-bk-hH0"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSm-l3-Gwx" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
+                                                                <rect key="frame" x="188" y="0.0" width="158" height="158"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="158" id="5DM-wB-nGi"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="158" id="Afo-lg-m0Q"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="egZ-Ww-pZs">
+                                                        <rect key="frame" x="0.0" y="188" width="346" height="158"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-sg-wOg" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="158" id="J68-vc-h4H"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IgW-Ud-dpr" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
+                                                                <rect key="frame" x="188" y="0.0" width="158" height="158"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="158" id="ndU-u2-fFg"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="158" id="Qz7-hg-oeG"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="346" id="ARv-G5-I2b"/>
+                                                    <constraint firstAttribute="height" constant="346" id="zau-Pt-s1G"/>
+                                                </constraints>
+                                            </stackView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="baG-Uo-TFI">
+                                                <rect key="frame" x="34" y="412" width="346" height="440"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="158" id="Cnr-bk-hH0"/>
+                                                    <constraint firstAttribute="height" constant="440" id="lav-F9-6qs"/>
                                                 </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSm-l3-Gwx" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
-                                                <rect key="frame" x="188" y="0.0" width="158" height="158"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="158" id="5DM-wB-nGi"/>
-                                                </constraints>
-                                            </view>
+                                            </tableView>
                                         </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="158" id="Afo-lg-m0Q"/>
+                                            <constraint firstItem="G9x-CW-pH2" firstAttribute="leading" secondItem="ktR-wU-Dfj" secondAttribute="leading" constant="34" id="2q6-3i-YC0"/>
+                                            <constraint firstItem="G9x-CW-pH2" firstAttribute="top" secondItem="ktR-wU-Dfj" secondAttribute="top" constant="42" id="7ok-UQ-zMf"/>
+                                            <constraint firstItem="baG-Uo-TFI" firstAttribute="leading" secondItem="G9x-CW-pH2" secondAttribute="leading" id="B8P-bA-2S8"/>
+                                            <constraint firstAttribute="trailing" secondItem="G9x-CW-pH2" secondAttribute="trailing" constant="34" id="FVj-5I-jm1"/>
+                                            <constraint firstItem="baG-Uo-TFI" firstAttribute="trailing" secondItem="G9x-CW-pH2" secondAttribute="trailing" id="cqn-GH-r1T"/>
+                                            <constraint firstItem="G9x-CW-pH2" firstAttribute="centerX" secondItem="ktR-wU-Dfj" secondAttribute="centerX" id="hmD-6N-Ktl"/>
+                                            <constraint firstAttribute="bottom" secondItem="baG-Uo-TFI" secondAttribute="bottom" constant="44" id="umH-Hx-ZL4"/>
+                                            <constraint firstItem="baG-Uo-TFI" firstAttribute="top" secondItem="G9x-CW-pH2" secondAttribute="bottom" constant="24" id="zRh-RV-hzr"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="egZ-Ww-pZs">
-                                        <rect key="frame" x="0.0" y="188" width="346" height="158"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-sg-wOg" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="158" id="J68-vc-h4H"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IgW-Ud-dpr" customClass="StatView" customModule="cov_stats" customModuleProvider="target">
-                                                <rect key="frame" x="188" y="0.0" width="158" height="158"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="158" id="ndU-u2-fFg"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="158" id="Qz7-hg-oeG"/>
-                                        </constraints>
-                                    </stackView>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="346" id="ARv-G5-I2b"/>
-                                    <constraint firstAttribute="height" constant="346" id="zau-Pt-s1G"/>
+                                    <constraint firstItem="ktR-wU-Dfj" firstAttribute="leading" secondItem="jHG-6O-oTY" secondAttribute="leading" id="MJw-fI-UjO"/>
+                                    <constraint firstItem="ktR-wU-Dfj" firstAttribute="top" secondItem="jHG-6O-oTY" secondAttribute="top" id="TD5-EE-I9k"/>
+                                    <constraint firstAttribute="bottom" secondItem="ktR-wU-Dfj" secondAttribute="bottom" id="XYm-6v-u9I"/>
+                                    <constraint firstAttribute="trailing" secondItem="ktR-wU-Dfj" secondAttribute="trailing" id="ftK-SE-8Az"/>
                                 </constraints>
-                            </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="baG-Uo-TFI">
-                                <rect key="frame" x="34" y="456" width="346" height="440"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LOw-22-9Fe"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="baG-Uo-TFI" firstAttribute="trailing" secondItem="G9x-CW-pH2" secondAttribute="trailing" id="6Dp-nM-YnL"/>
-                            <constraint firstItem="G9x-CW-pH2" firstAttribute="centerX" secondItem="NSf-yr-PjL" secondAttribute="centerX" id="Is3-1F-Uln"/>
-                            <constraint firstAttribute="bottom" secondItem="baG-Uo-TFI" secondAttribute="bottom" id="MIh-Nr-Ylp"/>
-                            <constraint firstItem="G9x-CW-pH2" firstAttribute="top" secondItem="LOw-22-9Fe" secondAttribute="top" constant="42" id="gil-Kh-Oce"/>
-                            <constraint firstItem="baG-Uo-TFI" firstAttribute="leading" secondItem="G9x-CW-pH2" secondAttribute="leading" id="jjP-q4-3XV"/>
-                            <constraint firstItem="baG-Uo-TFI" firstAttribute="top" secondItem="G9x-CW-pH2" secondAttribute="bottom" constant="24" id="zu3-di-8Hl"/>
+                            <constraint firstAttribute="trailing" secondItem="jHG-6O-oTY" secondAttribute="trailing" id="367-zW-nzk"/>
+                            <constraint firstItem="jHG-6O-oTY" firstAttribute="top" secondItem="NSf-yr-PjL" secondAttribute="top" id="H3a-9n-6rV"/>
+                            <constraint firstAttribute="bottom" secondItem="jHG-6O-oTY" secondAttribute="bottom" id="Vwn-li-2nk"/>
+                            <constraint firstItem="jHG-6O-oTY" firstAttribute="leading" secondItem="NSf-yr-PjL" secondAttribute="leading" id="YUJ-CY-lbg"/>
+                            <constraint firstItem="jHG-6O-oTY" firstAttribute="width" secondItem="NSf-yr-PjL" secondAttribute="width" id="gPK-0W-LW2"/>
+                            <constraint firstItem="jHG-6O-oTY" firstAttribute="height" secondItem="NSf-yr-PjL" secondAttribute="height" id="n3X-3X-53v"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activeCasesView" destination="2qH-sg-wOg" id="6r6-2a-yX1"/>
                         <outlet property="recoveredView" destination="vSm-l3-Gwx" id="wdf-gj-Xya"/>
                         <outlet property="tableView" destination="baG-Uo-TFI" id="5yb-cG-GcL"/>
+                        <outlet property="tableViewHeight" destination="lav-F9-6qs" id="0eR-C5-tCa"/>
                         <outlet property="totalCasesView" destination="aPn-Hk-Zff" id="JZ9-d7-N79"/>
                         <outlet property="totalDeathView" destination="IgW-Ud-dpr" id="KEl-FI-Ood"/>
                     </connections>

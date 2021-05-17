@@ -12,15 +12,11 @@ struct StatsReports: Codable {
     let totalCases: String
     let recoveredCases: String
     let activeCases: String
-    let totalDeath: String
-}
-
-struct LiveReports: Codable {
-    let allReports: [CountryReport]
+    let deathCases: String
 }
 
 struct CountryReport: Codable {
     let code: String
     let name: String
-    let numberOfCases: String
+    let cases: String
 }
