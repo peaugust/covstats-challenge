@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FlagKit
 
 class CountryCell: UITableViewCell, NibLoadable {
 
@@ -37,8 +36,7 @@ class CountryCell: UITableViewCell, NibLoadable {
     // MARK: - Public
     
     func bind(countryCode: String, countryName: String, countryReports: String) {
-        let flag = Flag(countryCode: countryCode)
-        countryFlagImage.image = flag?.image(style: .roundedRect)
+        countryFlagImage.image = UIImage(named: countryCode)
         countryNameLabel.text = countryName
         countryReportsLabel.text = countryReports
     }
