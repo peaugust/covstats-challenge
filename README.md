@@ -2,7 +2,7 @@
 
 ## Description
 
-This challenge shows a subset of COVStats - a Figma community design. It shows some stats about the COVID-19 spread worldwide. This challenge focus is on setup the app code signing, debug and fix existing bugs. The app screens should allow the user to see on the Home tab the number of total cases, active cases, recovered, total death, and top-five countries cases reports. The map tab shows a map to discover the reported cases near the user allowing filter results by: City/Country, Reported Cases and Reported Deaths. But on this challenge the unique data that will be retrived is the cases around.
+This challenge shows a subset of [COVStats - a Figma community design](https://www.figma.com/community/file/824267725540451043). It shows some stats about the COVID-19 spread worldwide. This challenge focus is on setup the app code signing, debug and fix existing bugs. The app screens should allow the user to see on the Home tab the number of total cases, active cases, recovered, total death, and top-five countries cases reports. The map tab shows a map to discover the reported cases near the user allowing filter results by: City/Country, Reported Cases and Reported Deaths. But on this challenge the unique data that will be retrived is the cases around.
 
 ### Challenge Goal:
 
