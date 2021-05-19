@@ -5,7 +5,7 @@ This repository contains the cov-stats (iOS) project.
 ## Work Environment
 
 - Swift 4.2
-- Xcode 10.0+
+- Xcode 12.0+
 
 ## Dependencies
 

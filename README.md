@@ -2,7 +2,7 @@
 
 ## Description
 
-This challenge shows a subset of COVStats - a Figma community design. It shows some stats about the COVID-19 spread worldwide. This challenge focus is on setup the app code signing, debug and fix existing bugs. The app screens should allow the user to see on the Home tab the number of total cases, active cases, recovered, total death, and top-five countries cases report. And on the Map tab a map to discover the reported cases near the user (this data will be mocked).
+This challenge shows a subset of COVStats - a Figma community design. It shows some stats about the COVID-19 spread worldwide. This challenge focus is on setup the app code signing, debug and fix existing bugs. The app screens should allow the user to see on the Home tab the number of total cases, active cases, recovered, total death, and top-five countries cases reports. The map tab shows a map to discover the reported cases near the user allowing filter results by: City/Country, Reported Cases and Reported Deaths. But on this challenge the unique data that will be retrived is the cases around.
 
 ### Challenge Goal:
 
@@ -20,17 +20,7 @@ Have the CovStats app deployed on Jungle's Testflight, showing the data retrieve
 
 ### Requirements
 
-Overall:
-
-- Setup the app code signing using the certificates stored in 1Password <ADD THE VAULT NAME HERE>
-
-Home screen:
-
-- Be able to see all fields expected in the design
-
-Map screen:
-
-- Be able to open and use the map screen
+Overall: - Be able to see the title of each screen on the Navigation Bar - Be able to run the app without crashes Home screen: - Be able to see all fields expected in the design - Be able to scroll the screen Map screen: - Be able to open the map screen and use the map - Be able to select a filter - Be able to see the number of cases around
 
 ## Resources
 
@@ -40,18 +30,20 @@ https://wiki.jungle.rocks/doc/getting-started-with-1password-E7rDPBEdw1
 
 ## Pre-requisites
 
-- Knowledge on app code sigining, debug and integration
+- Knowledge on Basic UI, constraints, and debugging
 
 ## Instructions to run
 
-Fork the repo, in the forked repo, create a new branch to work on. When done, open a pull request from your branch to the master branch of the forked repo so that the end result can be reviewed.
+Fork the repo, in the forked repo, create a new branch to work on.
 
 To run the JSON server: In order to implement this challenge, we created a json db file to be used with JSON Server. To set it up follow the steps below.
 
 1. Install Node.js on your machine if you haven't. You can run node -v or npm -v in the command line to check if it's already installed.
-1. Open the terminal
-1. Run: npm install -g json-server
-1. Download the move-challenge-db json file below
-1. Change directory to the one in which you created or the json file
-1. Run: json-server --watch move-challenge-db.json --delay 3000
-1. The command should have created a home endpoint: http://localhost:3000
+2. Open the terminal
+3. Run: npm install -g json-server
+4. Download the move-challenge-db json file below
+5. Change directory to the one in which you created or the json file
+6. Run: json-server --watch move-challenge-db.json --delay 3000
+7. The command should have created a home endpoint: http://localhost:3000
+
+When done your changes, open a pull request from your branch to the master branch of the forked repo so that the end result can be reviewed.
