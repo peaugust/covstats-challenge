@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var reportsRepository = ReportsRepository()
+    var casesRepository = CasesRepository()
 
     // swiftlint:disable:next force_cast
     static let shared = UIApplication.shared.delegate as! AppDelegate

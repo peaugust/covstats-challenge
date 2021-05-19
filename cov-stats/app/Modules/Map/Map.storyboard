@@ -59,15 +59,24 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVq-J5-7dB">
+                                <rect key="frame" x="24" y="830" width="366" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0tK-x8-xPg"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="0tK-x8-xPg" firstAttribute="trailing" secondItem="vVq-J5-7dB" secondAttribute="trailing" constant="24" id="1NP-gh-8lo"/>
                             <constraint firstItem="vLh-33-GRk" firstAttribute="top" secondItem="0tK-x8-xPg" secondAttribute="top" constant="20" id="2Ex-8k-BhP"/>
+                            <constraint firstItem="vVq-J5-7dB" firstAttribute="leading" secondItem="0tK-x8-xPg" secondAttribute="leading" constant="24" id="7o1-Eb-kuk"/>
                             <constraint firstItem="0tK-x8-xPg" firstAttribute="bottom" secondItem="tYs-bs-NAE" secondAttribute="bottom" id="Chq-gR-eLw"/>
                             <constraint firstItem="tYs-bs-NAE" firstAttribute="top" secondItem="0tK-x8-xPg" secondAttribute="top" id="QI6-Uo-eaT"/>
                             <constraint firstItem="tYs-bs-NAE" firstAttribute="leading" secondItem="0tK-x8-xPg" secondAttribute="leading" id="Qoq-eF-ff6"/>
                             <constraint firstItem="0tK-x8-xPg" firstAttribute="trailing" secondItem="tYs-bs-NAE" secondAttribute="trailing" id="SZM-1L-K7P"/>
+                            <constraint firstItem="0tK-x8-xPg" firstAttribute="bottom" secondItem="vVq-J5-7dB" secondAttribute="bottom" constant="32" id="avm-KP-1f5"/>
                             <constraint firstItem="0tK-x8-xPg" firstAttribute="trailing" secondItem="vLh-33-GRk" secondAttribute="trailing" constant="24" id="hM0-GZ-2v5"/>
                             <constraint firstItem="vLh-33-GRk" firstAttribute="leading" secondItem="0tK-x8-xPg" secondAttribute="leading" constant="24" id="hOp-GW-CXX"/>
                         </constraints>
@@ -78,6 +87,7 @@
                         <outlet property="dropdownLabel" destination="ijW-yo-7Jq" id="cXW-xW-mcm"/>
                         <outlet property="dropdownView" destination="XbF-WN-Etg" id="0R0-P5-SNJ"/>
                         <outlet property="mapView" destination="tYs-bs-NAE" id="REI-DG-248"/>
+                        <outlet property="spotedCasesAroundLabel" destination="vVq-J5-7dB" id="Gh2-dK-lLT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYH-gI-Q3A" userLabel="First Responder" sceneMemberID="firstResponder"/>

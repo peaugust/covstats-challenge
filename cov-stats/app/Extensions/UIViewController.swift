@@ -30,4 +30,10 @@ extension UIViewController {
     func wrapInNavigationController() -> UINavigationController {
         return UINavigationController(rootViewController: self)
     }
+    
+    func showOkAlert(title: String? = nil, description: String? = nil, completion: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { _ in completion?() }))
+        self.present(alert, animated: true, completion: nil)
+    }
 }

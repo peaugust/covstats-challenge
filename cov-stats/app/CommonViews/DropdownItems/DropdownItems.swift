@@ -22,6 +22,8 @@ final class DropdownItems: UIView, NibLoadable {
         "Discover by Reported Cases",
         "Discover by Reported Deaths"
     ]
+    
+    var onSelectItem: ((String) -> Void)?
 
     // MARK: - Life cycle
 
@@ -59,9 +61,9 @@ final class DropdownItems: UIView, NibLoadable {
 }
 
 extension DropdownItems: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        onSelectItem?(items[indexPath.row])
+    }
 }
 
 extension DropdownItems: UITableViewDataSource {

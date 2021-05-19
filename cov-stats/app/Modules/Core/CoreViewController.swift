@@ -21,7 +21,8 @@ class CoreViewController: UITabBarController {
         let homeViewModel = HomeViewModel(reportsRepository: AppDelegate.shared.reportsRepository)
         let homeViewController = HomeViewController.initModule(viewModel: homeViewModel)
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic-home"), selectedImage: nil)
-        let mapViewController = MapViewController.initModule()
+        let mapViewModel = MapViewModel(repository: AppDelegate.shared.casesRepository)
+        let mapViewController = MapViewController.initModule(viewModel: mapViewModel)
         mapViewController.tabBarItem = UITabBarItem(title: "Map", image: UIImage(named: "ic-map"), selectedImage: nil)
         
         viewControllers = [homeViewController, mapViewController]

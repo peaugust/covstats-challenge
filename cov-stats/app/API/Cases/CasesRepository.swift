@@ -7,8 +7,20 @@
 //
 
 import Foundation
+import RxSwift
 
 class CasesRepository {
-    // TODO: Implement it
+    var casesAroundSubject = BehaviorSubject<Int>(value: 0)
+
+    func getCasesAround() {
+        CasesAPIManager.GetCasesAround().request { result in
+            switch result {
+            case .failure(let error):
+                self.casesAroundSubject.onError(error)
+            case .success(let response):
+                self.casesAroundSubject.onNext(response.casesAround)
+            }
+        }
+    }
 }
 

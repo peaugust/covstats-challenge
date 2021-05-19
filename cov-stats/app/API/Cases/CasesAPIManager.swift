@@ -11,4 +11,18 @@ import Foundation
 import Foundation
 import Alamofire
 
-final class CasesAPIManager {}
+final class CasesAPIManager {
+    struct GetCasesAround: APIRequestable {
+        typealias APIResponse = ResponseBody
+        var method: HTTPMethod = .get
+        var parameters: Parameters?
+        var url: String = Constants.Endpoints.casesAround
+        var headers: HTTPHeaders?
+        var logoutIfUnauthorized: Bool = false
+        var apiLoggerLevel: APILoggerLevel = .debug
+        
+        struct ResponseBody: Codable {
+            let casesAround: Int
+        }
+    }
+}
