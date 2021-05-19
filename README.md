@@ -20,7 +20,18 @@ Have the CovStats app deployed on Jungle's Testflight, showing the data retrieve
 
 ### Requirements
 
-Overall: - Be able to see the title of each screen on the Navigation Bar - Be able to run the app without crashes Home screen: - Be able to see all fields expected in the design - Be able to scroll the screen Map screen: - Be able to open the map screen and use the map - Be able to select a filter - Be able to see the number of cases around
+#### Overall: 
+- Be able to see the title of each screen on the Navigation Bar 
+- Be able to run the app without crashes 
+
+#### Home screen: 
+- Be able to see all fields expected in the design 
+- Be able to scroll the screen 
+
+#### Map screen: 
+- Be able to open the map screen and use the map 
+- Be able to select a filter 
+- Be able to see the number of cases around
 
 ## Resources
 
