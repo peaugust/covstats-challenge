@@ -45,13 +45,13 @@ class MapViewController: BaseViewController, StoryboardLoadable {
         super.viewDidLoad()
         setupView()
         setupObservables()
+        parent?.title = "Discovery"
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         LocationHelper.shared.delegate = self
         LocationHelper.shared.startMonitoringLocation()
-        parent?.title = "Discovery"
         dropdownItems.isHidden = true
     }
 
@@ -71,7 +71,6 @@ class MapViewController: BaseViewController, StoryboardLoadable {
         
         viewModel?.selectedFilterSubject.subscribe(onNext: { [weak self] currentFilter in
             self?.dropdownLabel.text = currentFilter
-            self?.toggleDropdown()
         }).disposed(by: disposeBag)
     }
 

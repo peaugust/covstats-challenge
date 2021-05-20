@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHG-6O-oTY">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jHG-6O-oTY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-wU-Dfj">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-wU-Dfj">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="G9x-CW-pH2">
@@ -92,7 +92,6 @@
                                             <constraint firstAttribute="trailing" secondItem="G9x-CW-pH2" secondAttribute="trailing" constant="34" id="FVj-5I-jm1"/>
                                             <constraint firstItem="baG-Uo-TFI" firstAttribute="trailing" secondItem="G9x-CW-pH2" secondAttribute="trailing" id="cqn-GH-r1T"/>
                                             <constraint firstItem="G9x-CW-pH2" firstAttribute="centerX" secondItem="ktR-wU-Dfj" secondAttribute="centerX" id="hmD-6N-Ktl"/>
-                                            <constraint firstAttribute="bottom" secondItem="baG-Uo-TFI" secondAttribute="bottom" constant="44" id="umH-Hx-ZL4"/>
                                             <constraint firstItem="baG-Uo-TFI" firstAttribute="top" secondItem="G9x-CW-pH2" secondAttribute="bottom" constant="24" id="zRh-RV-hzr"/>
                                         </constraints>
                                     </view>

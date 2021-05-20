@@ -42,11 +42,11 @@ class HomeViewController: BaseViewController, StoryboardLoadable {
         setupStatViews()
         setupTableView()
         setupObservables()
+        parent?.title = "COVID-19"
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        parent?.title = "COVID-19"
     }
 
     // MARK: - Private
@@ -79,7 +79,6 @@ class HomeViewController: BaseViewController, StoryboardLoadable {
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-        tableView.register(CountryCell.self)
         tableView.layer.borderColor = UIColor.gray60.cgColor
         tableView.layer.borderWidth = 1
         tableView.layer.cornerRadius = 10

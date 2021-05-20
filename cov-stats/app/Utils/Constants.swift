@@ -32,7 +32,7 @@ enum Constants {
 
         // MARK: Auth
 
-        static var latestData: String { return getEndpointURL("/latest_data/") }
+        static var latestData: String { return getEndpointURL("/latest_data") }
         static var casesAround: String { return getEndpointURL("/cases_around")}
     }
 }
