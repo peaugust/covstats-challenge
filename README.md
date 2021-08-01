@@ -1,20 +1,8 @@
-# Jungle Devs - iOS CovStats Challenge Work Experience > Carrer Launch
+# iOS CovStats Challenge 
 
 ## Description
 
-This challenge shows a subset of [COVStats - a Figma community design](https://www.figma.com/community/file/824267725540451043). It shows some stats about the COVID-19 spread worldwide. This challenge focus is on setup the app code signing, debug and fix existing bugs. The app screens should allow the user to see on the Home tab the number of total cases, active cases, recovered, total death, and top-five countries cases reports. The map tab shows a map to discover the reported cases near the user allowing filter results by: City/Country, Reported Cases and Reported Deaths. But on this challenge the unique data that will be retrived is the cases around.
-
-### Challenge Goal:
-
-This challenge aims to check the academy transition from Work Experience to Carrer Launch
-
-### Target Level
-
-Work Experience
-
-### Final Accomplishment
-
-Have the CovStats app deployed on Jungle's Testflight, showing the data retrieved from the BE correctly.
+This challenge is a subset of [COVStats - a Figma community design](https://www.figma.com/community/file/824267725540451043). The main goal of this app is to show some stats about the COVID-19 spread worldwide. The focus of this challenge is on debug and fix existing bugs. The app screens should allow the user to see on the Home tab the number of total cases, active cases, recovered, total death, and top-five countries cases reports. The map tab shows a map to discover the reported cases near the user allowing filter results by: City/Country, Reported Cases and Reported Deaths. On this challenge the only data retrived will be the cases around.
 
 ## Acceptance criteria
 
@@ -35,9 +23,8 @@ Have the CovStats app deployed on Jungle's Testflight, showing the data retrieve
 
 ## Resources
 
-https://www.figma.com/file/4jnYdbDcT3KQX7HzTFIGGL/iOS---Transition-Challenge?node-id=0%3A1
+TODO: Add Figma in here
 
-https://wiki.jungle.rocks/doc/getting-started-with-1password-E7rDPBEdw1
 
 ## Pre-requisites
 
