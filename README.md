@@ -1,4 +1,4 @@
-# iOS CovStats Challenge 
+# CovStats Challenge 
 
 ## Description
 
