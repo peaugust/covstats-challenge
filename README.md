@@ -23,7 +23,7 @@ This challenge is a subset of [COVStats - a Figma community design](https://www.
 
 ## Resources
 
-TODO: Add Figma in here
+<img width="921" alt="image" src="https://user-images.githubusercontent.com/29137856/197544338-c3369891-78d1-427c-8f37-ef1f23432b04.png">
 
 
 ## Pre-requisites
