@@ -24,6 +24,7 @@ This challenge is a subset of [COVStats - a Figma community design](https://www.
 ## Resources
 
 <img width="921" alt="image" src="https://user-images.githubusercontent.com/29137856/197544338-c3369891-78d1-427c-8f37-ef1f23432b04.png">
+https://user-images.githubusercontent.com/29137856/197547294-2f794550-9337-489b-8c5a-4321e5e37cbe.mov
 
 
 ## Pre-requisites
